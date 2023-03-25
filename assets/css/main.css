@@ -3,23 +3,23 @@
 
 * {
 	box-sizing: border-box;
-  }
-  
-  /* Set a background color */
-  body {
+}
+
+/* Set a background color */
+body {
 	background-color: #474e5d;
 	font-family: Helvetica, sans-serif;
-  }
-  
-  /* The actual timeline (the vertical ruler) */
-  .timeline {
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
 	position: relative;
 	max-width: 1200px;
 	margin: 0 auto;
-  }
-  
-  /* The actual timeline (the vertical ruler) */
-  .timeline::after {
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
 	content: '';
 	position: absolute;
 	width: 6px;
@@ -28,18 +28,18 @@
 	bottom: 0;
 	left: 50%;
 	margin-left: -3px;
-  }
-  
-  /* Container around content */
-  .container {
+}
+
+/* Container around content */
+.container {
 	padding: 10px 40px;
 	position: relative;
 	background-color: inherit;
 	width: 50%;
-  }
-  
-  /* The circles on the timeline */
-  .container::after {
+}
+
+/* The circles on the timeline */
+.container::after {
 	content: '';
 	position: absolute;
 	width: 25px;
@@ -50,20 +50,20 @@
 	top: 15px;
 	border-radius: 50%;
 	z-index: 1;
-  }
-  
-  /* Place the container to the left */
-  .lefts {
+}
+
+/* Place the container to the left */
+.lefts {
 	left: 0;
-  }
-  
-  /* Place the container to the right */
-  .rights {
+}
+
+/* Place the container to the right */
+.rights {
 	left: 50%;
-  }
-  
-  /* Add arrows to the left container (pointing right) */
-  .lefts::before {
+}
+
+/* Add arrows to the left container (pointing right) */
+.lefts::before {
 	content: " ";
 	height: 0;
 	position: absolute;
@@ -74,10 +74,10 @@
 	border: medium solid white;
 	border-width: 10px 0 10px 10px;
 	border-color: transparent transparent transparent white;
-  }
-  
-  /* Add arrows to the right container (pointing left) */
-  .rights::before {
+}
+
+/* Add arrows to the right container (pointing left) */
+.rights::before {
 	content: " ";
 	height: 0;
 	position: absolute;
@@ -88,55 +88,59 @@
 	border: medium solid white;
 	border-width: 10px 10px 10px 0;
 	border-color: transparent white transparent transparent;
-  }
-  
-  /* Fix the circle for containers on the right side */
-  .rights::after {
+}
+
+/* Fix the circle for containers on the right side */
+.rights::after {
 	left: -16px;
-  }
-  
-  /* The actual content */
-  .content {
+}
+
+/* The actual content */
+.content {
 	padding: 20px 30px;
 	background-color: white;
 	position: relative;
 	border-radius: 6px;
-  }
-  
-  /* Media queries - Responsive timeline on screens less than 600px wide */
-  @media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
-	.timeline::after {
-	  left: 31px;
-	}
-  
-  /* Full-width containers */
-	.container {
-	  width: 100%;
-	  padding-left: 70px;
-	  padding-right: 25px;
-	}
-  
-  /* Make sure that all arrows are pointing leftwards */
-	.container::before {
-	  left: 50px;
-	  border: medium solid white;
-	  border-width: 10px 10px 10px 0;
-	  border-color: transparent white transparent transparent;
-	}
-  
-  /* Make sure all circles are at the same spot */
-	.lefts::after, .rights::after {
-	  left: 15px;
-	}
-  
-  /* Make all right containers behave like the left ones */
-	.rights {
-	  left: 0%;
-	}
-  }
+}
 
-#more {display: none;}
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+
+	/* Place the timelime to the left */
+	.timeline::after {
+		left: 31px;
+	}
+
+	/* Full-width containers */
+	.container {
+		width: 100%;
+		padding-left: 70px;
+		padding-right: 25px;
+	}
+
+	/* Make sure that all arrows are pointing leftwards */
+	.container::before {
+		left: 50px;
+		border: medium solid white;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent white transparent transparent;
+	}
+
+	/* Make sure all circles are at the same spot */
+	.lefts::after,
+	.rights::after {
+		left: 15px;
+	}
+
+	/* Make all right containers behave like the left ones */
+	.rights {
+		left: 0%;
+	}
+}
+
+#more {
+	display: none;
+}
 
 
 .btn-group button {
@@ -3618,9 +3622,15 @@ body.is-preload #wrapper.fade-in:before {
 	text-align: center;
 }
 
+/* comments */
+
+#comments {
+	text-align: center;
+	color: white;
+}
+
 
 /* Intro */
-
 #intro {
 	color: #ffffff;
 	padding: 8rem 4rem 6rem 4rem;
